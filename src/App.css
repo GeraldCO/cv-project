@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial;
+    background: #f9f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    display: flex;
+    flex-direction: column;
+    padding: 0 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.switch-mode{
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.or{
+    z-index: 3;
+    background: green;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+    margin-top: 50px;
+    background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.personal-container, .experience-container {
+    display : grid;
+    grid-template: 50px / 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+.textarea-fieldset textarea{
+    width: 100%;
+    padding: 3px;
+}
+
+.personal-info-save-button, .textarea-fieldset{
+    grid-column: span 2;   
+    width: 60%;
+
+}
+
+.personal-container label, .experience-container label{
+    display: block;
+    color: #777;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+
+input, textarea{
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ffffff, #e4e9e4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.input-disabled{
+    font-size: 25px;
+    color: black;
+    border: none;
+    background: none;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns : 300px 300px 300px;
+    justify-content: center;
+    row-gap: 60px;
+    margin:25px 0;
+}
+
+
+.skills-container li{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 20px;
+}
+
+.skills-container li{
+    list-style: none;
+}
+
+.job-experience-element{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-delete{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-weight : bold;
+    font-size : 30px;
+    border-radius: 15%;
+}
+
+.job-experience-container{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    margin: 20px 100px;
 }
